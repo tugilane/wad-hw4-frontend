@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: x-large;
+  font-size: 20px;
+  background-color: #b4b2b2;
+  padding-top: 70px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.post-card {
+  padding: 16px;
+  margin-bottom: 22px;
+  border-radius: 8px;
+  background-color: #9b9898;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.post-author {
+  font-weight: bold;
+}
+
+.post-date {
+  font-style: italic;
+}
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  z-index: 100;
+  font-size: 24px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-style: bold;
+}
+
+.links li {
+  margin-left: 20px;
+  font-style: bold;
+}
+
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #9b9898;
+  color: #555;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.signup-form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+}
+
+.signup-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #555;
+}
+
+.post-reactions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.like-button{
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.like-button:hover{
+  background-color: #b3b3b3;
+}
+
+.like-icon{
+  width: 35px;
+  height: 25px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.reset-button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.reset-button{
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #9b9898;
+  transition: all 0.2s;
+}
+
+.reset-button:hover{
+  background-color: #8f8f8f;
+}
+

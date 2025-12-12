@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Arthur Morgan",
+    "date": "1899-05-10",
+    "title": "You're alright, boy.",
+    "text": "Spent half the morning brushing the horses. Worth every minute. Good boy.",
+    "image": "https://media.npr.org/assets/img/2018/12/31/rdr2_screenshot-014_wide-71d02434782cc887366ba9767260080bb73fa207.jpg?s=800&c=85&f=webp"
+  },
+
+  {
+    "name": "Hosea Matthews",
+    "date": "1899-05-12",
+    "title": "I’m too old for this nonsense",
+    "text": "Dutch thinks this is all going to work out. I don’t know about that, Dutch…"
+  },
+
+  {
+    "name": "Micah Bell",
+    "date": "1899-05-13",
+    "title": "Where’s my goddamn money?",
+    "text": "I swear, every time I ask Strauss about the accounts, he gives me that look."
+  },
+
+  {
+    "name": "John Marston",
+    "date": "1899-05-15",
+    "title": "Trying my best",
+    "text": "Jack keeps asking about school. Maybe someday… when we’re done running."
+  },
+
+  {
+    "name": "Sadie Adler",
+    "date": "1899-05-17",
+    "title": "Ride or die",
+    "text": "Folks underestimate me. Let them. Makes it easier."
+  },
+
+  {
+    "name": "Dutch van der Linde",
+    "date": "1899-05-18",
+    "title": "I HAVE A PLAN",
+    "text": "All we need… is *one* more score.",
+    "image": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/2cced39fd0a358607ed093c2a735d53b.jpg"
+  },
+
+  {
+    "name": "Charles Smith",
+    "date": "1899-05-19",
+    "title": "Keeping things steady",
+    "text": "Hunted some deer today. Shared the meat with the camp. Felt right."
+  },
+
+  {
+    "name": "Lenny Summers",
+    "date": "1899-05-21",
+    "title": "LENNY!",
+    "text": "Can’t go anywhere without Arthur yelling my name like he lost me in a saloon."
+  },
+
+  {
+    "name": "Susan Grimshaw",
+    "date": "1899-05-22",
+    "title": "Camp discipline",
+    "text": "If folks don’t start cleaning up after themselves, I’m throwing half their junk in the river.",
+    "image": "https://i0.wp.com/epicbrew.net/wp-content/uploads/2018/10/reddead2-camp.jpg?resize=1024%2C576&ssl=1"
+  },
+
+  {
+    "name": "Arthur Morgan",
+    "date": "1899-05-23",
+    "title": "I don’t know about that, Dutch…",
+    "text": "Every time he says 'one more score' I feel my soul leave my body."
+  }
+]
