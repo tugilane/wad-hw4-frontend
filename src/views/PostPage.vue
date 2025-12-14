@@ -7,6 +7,7 @@
     <br />
 
     <button @click="save">Save</button>
+    <button @click="remove">Delete</button>
     <button @click="$router.push('/')">Cancel</button>
   </div>
 </template>
@@ -30,18 +31,32 @@ export default {
     this.post = await res.json();
   },
 
-  async save() {
-    await fetch(
-      `http://localhost:3000/api/posts/${this.post.id}`,
-      {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ body: this.post.body })
-      }
-    );
+  methods: {
+    async save() {
+      await fetch(
+        `http://localhost:3000/api/posts/${this.post.id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ body: this.post.body })
+        }
+      );
 
-    this.$router.push("/");
+      this.$router.push("/");
+    },
+
+    async remove() {
+      await fetch(
+        `http://localhost:3000/api/posts/${this.post.id}`,
+        {
+          method: "DELETE",
+          credentials: "include"
+        }
+      );
+
+      this.$router.push("/");
+    }
   }
 };
 </script>

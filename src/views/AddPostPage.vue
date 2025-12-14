@@ -2,7 +2,12 @@
   <div>
     <h1>Add a new post</h1>
 
-    <textarea v-model="post.body" rows="8"></textarea>
+    <textarea
+      v-model="body"
+      placeholder="Write your post here..."
+      rows="10"
+      cols="50"
+    ></textarea>
 
     <br />
 
