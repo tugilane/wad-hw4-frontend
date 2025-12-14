@@ -11,7 +11,7 @@
 
     <br />
 
-    <button @click="submitPost">Submit Post</button>
+    <button @click="submitPost" class="sumbitPostButton">Submit Post</button>
 
     <p v-if="errorMessage" style="color: red;">
       {{ errorMessage }}
@@ -55,3 +55,28 @@ export default {
   }
 };
 </script>
+
+<style>
+
+  textarea{
+    resize: none;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .sumbitPostButton{
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+  }
+
+.sumbitPostButton:hover {
+  background-color: #9b9b9b;
+}
+
+</style>

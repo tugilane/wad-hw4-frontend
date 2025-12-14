@@ -2,13 +2,18 @@
   <div>
     <h1>Edit post</h1>
 
-    <textarea v-model="post.body" rows="8"></textarea>
+    <textarea 
+    v-model="post.body" 
+    placeholder="Edit your post here..."
+    rows="10"
+    cols="50"
+    ></textarea>
 
     <br />
 
-    <button @click="save">Save</button>
-    <button @click="remove">Delete</button>
-    <button @click="$router.push('/')">Cancel</button>
+    <button @click="save" class="editPostButton">Save</button>
+    <button @click="remove" class="editPostButton">Delete</button>
+    <button @click="$router.push('/')" class="editPostButton">Cancel</button>
   </div>
 </template>
 
@@ -60,3 +65,23 @@ export default {
   }
 };
 </script>
+
+<style>
+
+  .editPostButton{
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+  margin-right: 15px;
+  }
+
+.editPostButton:hover {
+  background-color: #9b9b9b;
+}
+
+</style>
