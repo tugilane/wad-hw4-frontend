@@ -1,81 +1,94 @@
 <template>
-
-  <div id="logoutDiv">
-    <button id="logoutButton" @click="Logout">Logout</button>
+  <div class="topButtons">
+    <button @click="Logout" class="homePageButton">Logout</button>
   </div>
+
   <div>
-    <PostCard
-      v-for="(p, i) in posts"
-      :key="i"
-      :post="p"
-      :index = "i"
-    />
-    <ResetLikes/>
+    <div
+      v-for="p in posts"
+      :key="p.id"
+      class="click-post"
+      @click="goToPost(p.id)"
+    >
+      <PostCard :post="p" />
+    </div>
+  </div>
+
+  <div class="bottomButtons">
+    <button @click="$router.push('/posts/new')" class="homePageButton">Add post</button>
+
+    <button @click="deleteAll" class="homePageButton">Delete all</button>
   </div>
 </template>
 
 <script>
-import auth from "../auth";
-import { mapState } from 'vuex';
-import PostCard from '../components/PostCard.vue'
-import ResetLikes from '../components/ResetLikes.vue'; 
+import PostCard from "../components/PostCard.vue";
 
 export default {
-  name: 'LandingPage',
-  components: {
-    PostCard,
-    ResetLikes
-  },
-  computed: {
-    ...mapState(['posts'])
-  },
-  
-
-  // auth 
-   data: function() {
+  name: "LandingPage",
+  components: { PostCard },
+  data() {
     return {
-    posts:[ ],
-    authResult: auth.authenticated()
-    }
+      posts: []
+    };
   },
   methods: {
-    Logout() {
-      fetch("http://localhost:3000/auth/logout", {
-          credentials: 'include', //  Don't forget to specify this if you need cookies
-      })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        console.log('jwt removed');
-        window.location.href = "/";
-      })
-      .catch((e) => {
-        console.log(e);
-        console.log("error logout");
+    async loadPosts() {
+      const res = await fetch("http://localhost:3000/api/posts", {
+        credentials: "include"
       });
+      this.posts = await res.json();
     },
-  }, 
+    goToPost(id) {
+      this.$router.push(`/posts/${id}`);
+    },
+    async deleteAll() {
+      await fetch("http://localhost:3000/api/posts", {
+        method: "DELETE",
+        credentials: "include"
+      });
+      await this.loadPosts();
+    },
+    async Logout() {
+      await fetch("http://localhost:3000/auth/logout", {
+        credentials: "include"
+      });
+      this.$router.push("/login");
+    }
+  },
   mounted() {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-        .then((response) => response.json())
-        .then(data => this.posts = data)
-        .catch(err => console.log(err.message))
-    },
-    
-
-}
+    this.loadPosts();
+  }
+};
 </script>
 
-
 <style>
-  #logoutDiv{
-    display: flex;
-  }
+.topButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-  #logoutButton{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
-  }
+.homePageButton{
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.homePageButton:hover{
+  background-color: #9b9b9b;
+}
+
+.click-post {
+  cursor: pointer;
+}
+
+.bottomButtons{
+  display: flex;
+  justify-content: space-evenly;
+}
 </style>

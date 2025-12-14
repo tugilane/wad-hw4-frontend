@@ -4,6 +4,8 @@ import SignupPage from '../views/SignupPage.vue'
 import ContactUsPage from '../views/ContactUsPage.vue'
 import auth from "../auth";
 import LogIn from "../views/LogIn.vue";
+import PostPage from "../views/PostPage.vue";
+import AddPostPage from "../views/AddPostPage.vue";
 
 const routes = [
   {
@@ -21,7 +23,9 @@ const routes = [
     },
   { path: '/signup', component: SignupPage },
   {path: "/login",component: LogIn,},
-  { path: '/contact', component: ContactUsPage }
+  { path: '/contact', component: ContactUsPage },
+  { path: "/posts/new", component: AddPostPage },
+  { path: "/posts/:id", component: PostPage }
 ]
 
 export default createRouter({

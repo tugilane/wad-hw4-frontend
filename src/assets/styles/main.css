@@ -19,6 +19,12 @@ body {
   border-radius: 8px;
   background-color: #9b9898;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.post-card:hover{
+  background-color: #928f8f;
+  
 }
 
 .post-card img {
